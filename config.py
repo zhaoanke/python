@@ -7,7 +7,7 @@ class Config(object):
     DEBUG = True
     SECRET_KEY = 'dfddfdknknkjhkjk'
     # 数据库
-    SQLCHEMY_DATABASE_URI = "mysql://root:mysql@192.168.45.77:3306/ihome_python04"
+    SQLCHEMY_DATABASE_URI = "mysql://root:123456@192.168.45.77:3306/ihome_python04"
     SQLCHEMY_TRACK_MODIFICATIONS = True
 
     # redis
