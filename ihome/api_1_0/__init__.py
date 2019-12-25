@@ -5,4 +5,4 @@ from flask import Blueprint
 api = Blueprint("api_1_0", __name__)
 
 # 导入蓝图的视频
-from . import index
+from . import index, verify_code
