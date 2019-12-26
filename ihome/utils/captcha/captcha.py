@@ -6,7 +6,7 @@
 import random
 import string
 import os.path
-from io import StringIO, BytesIO
+from io import BytesIO
 
 from PIL import Image
 from PIL import ImageFilter
@@ -216,6 +216,7 @@ class Captcha(object):
     def generate_captcha(self):
         self.initialize()
         return self.captcha("")
+
 
 captcha = Captcha.instance()
 

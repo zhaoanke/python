@@ -7,8 +7,15 @@ class Config(object):
     DEBUG = True
     SECRET_KEY = 'dfddfdknknkjhkjk'
     # 数据库
-    SQLCHEMY_DATABASE_URI = "mysql://root:123456@192.168.45.77:3306/ihome_python04"
-    SQLCHEMY_TRACK_MODIFICATIONS = True
+    USERNAME = 'root'
+    PASSWORD = '123456'
+    HOST = '192.168.45.77'
+    PORT = '3306'
+    DATABASE = 'ihome_python04'
+
+    DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME, PASSWORD, HOST, PORT, DATABASE)
+    SQLALCHEMY_DATABASE_URI = DB_URI
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
 
     # redis
     REDIS_HOST = "192.168.45.77"

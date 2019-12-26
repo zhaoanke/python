@@ -1,7 +1,6 @@
 # coding=utf-8
-
-from CCPRestSDK import REST
-# import ConfigParser
+from ihome.libs.yuntongxun.CCPRestSDK import REST
+import configparser
 
 # 主帐号
 accountSid = '8a216da86f17653b016f3c27a7be1a76'
@@ -34,43 +33,39 @@ class CCP(object):
     instance = None
 
     def __new__(cls):
-        # 判断CCP类有没有已经创建好的对象
+        # 判断CCP类有没有创建好的对象，如果没有，创建一个对象，如果有，直接返回
         if cls.instance is None:
             obj = super(CCP, cls).__new__(cls)
 
-            # 初始化REST SDK
+            # 初始化REST yuntongxun
             obj.rest = REST(serverIP, serverPort, softVersion)
             obj.rest.setAccount(accountSid, accountToken)
             obj.rest.setAppId(appId)
 
             cls.instance = obj
-
         return cls.instance
 
-    def send_Template_sms(self, to, datas, temp_Id):
-        # 初始化REST SDK
+    def sendTemplateSMS(self, to, datas, temp_Id):
+
         result = self.rest.sendTemplateSMS(to, datas, temp_Id)
-        # for k, v in result.items():
+        # for k,v in result.items():
         #
         #     if k == 'templateSMS':
-        #         for k, s in v.items():
-        #             print('%s:%s' % (k, s))
+        #             for k, s in v.items():
+        #                 print('%s:%s' % (k, s))
         #     else:
         #         print('%s:%s' % (k, v))
-        status_code = result.get("statusCode")
-        if status_code == "000000":
-            # 表示短信发送成功
-            return 0
-        else:
-            # 表示短信发送失败
-            return -1
-
-            # sendTemplateSMS(手机号码,内容数据,模板Id)
+        # statusCode:     000000
+        # smsMessageSid:  54987ccdd2bbxxxxxxxxxxxx7de7ac93aa
+        # dateCreated:    20190811193012
+        status_code = result.get('statusCode')
+        if status_code == '000000':
+            return 0  # 000000表示发送成功
+        return -1  # 发送失败
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     ccp = CCP()
-    # 1代表模板ID，下载SDK的官网api文档有说明
-    # 这里填测试号码 免费发送短信  填的不是测试号码收短信费用
-    ret = ccp.send_Template_sms("18512548414", ["520wyl", "zak"], 1)
+    ret = ccp.sendTemplateSMS('18512548414', ["123", "456"], 1)
     print(ret)
+

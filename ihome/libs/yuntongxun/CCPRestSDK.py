@@ -15,9 +15,9 @@ import base64
 import datetime
 import urllib.request
 import requests
-import json
-from xmltojson import xmltojson
-from xml.dom import minidom
+# import json
+# from xmltojson import xmltojson
+# from xml.dom import minidom
 
 
 class REST:
@@ -121,9 +121,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -171,9 +171,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -224,9 +224,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -290,9 +290,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -359,9 +359,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -419,9 +419,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -467,10 +467,10 @@ class REST:
             # print(res.status_code, res.content, res.text, )
             data = res.text
             # xtj = xmltojson()
-            # locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # # locations = xtj.main(data)
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -521,9 +521,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -563,9 +563,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -615,9 +615,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main2(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -659,9 +659,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -712,9 +712,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
@@ -763,9 +763,9 @@ class REST:
             #     # xml格式
             #     xtj = xmltojson()
             #     locations = xtj.main(data)
-            if self.Iflog:
-                self.log(url, body, data)
-            return data
+            # if self.Iflog:
+            #     self.log(url, body, data)
+            # return data
         except Exception as error:
             if self.Iflog:
                 self.log(url, body, data)
